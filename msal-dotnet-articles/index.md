@@ -4,7 +4,7 @@ description: Learn how you can use the Microsoft Authentication Library for .NET
 author: Dickson-Mwendia
 manager: CelesteDG
 ms.author: dmwendia
-ms.date: 06/04/2024
+ms.date: 07/21/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
@@ -33,7 +33,7 @@ MSAL.NET supports different application topologies, including:
 
 For more information about the supported scenarios, see [Scenarios](./getting-started/scenarios.md).
 
-MSAL.NET supports multiple platforms, including [.NET](https://dotnet.microsoft.com/), [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework), and [.NET MAUI](https://dotnet.microsoft.com/apps/maui).
+MSAL.NET supports multiple platforms, including [.NET 8+](https://dotnet.microsoft.com/), [.NET Framework 4.8+](https://dotnet.microsoft.com/download/dotnet-framework), and [.NET MAUI](https://dotnet.microsoft.com/apps/maui).
 
 > [!NOTE]
 > Not all the authentication features are available in all platforms.
@@ -48,8 +48,8 @@ MSAL.NET supports multiple platforms, including [.NET](https://dotnet.microsoft.
 > —interoperability is not guaranteed. Microsoft does not provide support for issues arising from third-party IDP integrations. Such scenarios are considered
 > best-effort and may not be addressed.
 
-> [!NOTE]
-> MSAL.NET versions 4.61.0 and above do not provide support for Universal Windows Platform, Xamarin Android, and Xamarin iOS. Read more about the deprecation in [Announcing the Upcoming Deprecation of MSAL.NET for Xamarin and UWP](https://devblogs.microsoft.com/identity/uwp-xamarin-msal-net-deprecation/).
+> [!IMPORTANT]
+> MSAL.NET versions 4.61.0 and above do not provide support for Universal Windows Platform (UWP), Xamarin Android, and Xamarin iOS. These platforms were deprecated in June 2023. For mobile development, we recommend using .NET MAUI. Read more about the deprecation in [Announcing the Upcoming Deprecation of MSAL.NET for Xamarin and UWP](https://devblogs.microsoft.com/identity/uwp-xamarin-msal-net-deprecation/).
 
 ## Why use MSAL.NET?
 
@@ -77,18 +77,33 @@ MSAL.NET is used to acquire tokens. It's not used to protect a Web API. If you'r
 
 ## Migration from Azure Active Directory Authentication Library (ADAL)
 
-Microsoft Authentication Library (MSAL) for .NET is the supported library that can be used for authentication token acquisition. If you or your organization are using the Azure Active Directory Authentication Library (ADAL), you should [migrate to MSAL](/entra/identity-platform/msal-migration). ADAL reached end-of-life on **June 30, 2023**.
+Microsoft Authentication Library (MSAL) for .NET is the supported library that can be used for authentication token acquisition. If you or your organization are using the Azure Active Directory Authentication Library (ADAL), you should [migrate to MSAL](/entra/identity-platform/msal-migration). ADAL reached end-of-life on **June 30, 2023** and is no longer supported.
 
-> [!NOTE]
-> While ADAL is deprecated since June 30, 2023, applications depending on ADAL should not break as the underlying endpoint will remain active. However, no new features or support will be offered for ADAL.
+> [!WARNING]
+> ADAL has been deprecated since June 30, 2023. While applications depending on ADAL may continue to work as the underlying endpoint remains active, Microsoft no longer provides security fixes or support for ADAL. Organizations should prioritize migrating to MSAL to maintain security support.
 
-## Releases
+## Releases and Updates
 
-For previous releases, see the [Releases on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases).
+### Current Version Support
+MSAL.NET follows a [Long Term Support policy](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/supportPolicy.md). The library is currently in its 4.x major version cycle, with regular monthly patch releases containing security fixes and feature enhancements.
 
-For work-in-progress and future releases, see [Milestones](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/milestones).
+> [!TIP]
+> Always use the latest version of MSAL.NET to ensure you have the latest security fixes and performance improvements. Check the [latest version on NuGet](https://www.nuget.org/packages/Microsoft.Identity.Client/).
 
-For more information on versioning, see [Semantic versioning - API change management](resources/semantic-versioning-api-change-management.md) to understand changes in MSAL.NET public API.
+### Key Recent Enhancements (2024-2025)
+- **Performance Improvements**: Significant caching performance enhancements for large token caches
+- **Security Updates**: Regular security patches and vulnerability fixes
+- **Platform Updates**: Continued support for latest .NET versions and improved .NET MAUI integration
+- **Deprecation Notices**: Xamarin and UWP platform support was deprecated in June 2023
+
+### Release Information
+- **Current Releases**: See the [Releases on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/releases)
+- **Upcoming Features**: Check [Milestones](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/milestones) for planned features
+- **API Changes**: Review [Semantic versioning - API change management](resources/semantic-versioning-api-change-management.md) for breaking changes
+
+### Migration Guidance
+- **From ADAL**: ADAL reached end-of-life in June 2023. Follow the [MSAL migration guide](/entra/identity-platform/msal-migration)
+- **From Xamarin/UWP**: Migrate to .NET MAUI for cross-platform mobile development
 
 ## Samples
 

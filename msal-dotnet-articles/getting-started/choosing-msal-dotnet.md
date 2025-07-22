@@ -4,7 +4,7 @@ description: Learn how to choose a version of MSAL.NET that suits your developme
 author: cilwerner
 manager: CelesteDG
 ms.author: cwerner
-ms.date: 03/17/2023
+ms.date: 07/21/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer: 
@@ -35,7 +35,7 @@ You're building a desktop or mobile app. Use MSAL.NET directly and start acquiri
 
 ## Use [Microsoft Identity Web](https://github.com/AzureAD/microsoft-identity-web/)
 
-You're building a confidential client application (Web app, web API, daemon/service app) running on ASP.NET Core, ASP.NET OWIN, or .NET framework/.NET Core. See what Microsoft Identity Web has to offer:
+You're building a confidential client application (Web app, web API, daemon/service app) running on ASP.NET Core, ASP.NET OWIN, or .NET Framework/.NET. See what Microsoft Identity Web has to offer:
 
 - Sign users in via web apps in Microsoft Entra ID, Azure AD B2C, and Microsoft Entra External ID applications
   - Support Microsoft personal accounts
