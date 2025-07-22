@@ -4,7 +4,7 @@ description: Learn the application scenarios and authentication flows supported 
 author: cilwerner
 manager: CelesteDG
 ms.author: cwerner
-ms.date: 03/17/2023
+ms.date: 07/21/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
@@ -27,7 +27,7 @@ As a developer, you can acquire a token from a number of **application types**, 
 
 MSAL.NET supports acquiring tokens either in the name of a **user** ![user icon](../media/user-icon.png), or, (and only for confidential client applications), in the name of the application itself (for no user). In that case the confidential client application shares a secret with Microsoft Entra ID ![Microsoft Entra ID icon](../media/certificate-icon.png)
 
-MSAL.NET supports a number of **platforms** (.NET Framework, .NET, and .NET MAUI). .NET apps can also run on different operating systems (Windows, Linux, and macOS). The scenarios can be different depending on the platforms.
+MSAL.NET supports a number of **platforms** (.NET Framework 4.8+, .NET 8+, and .NET MAUI). .NET apps can also run on different operating systems (Windows, Linux, and macOS). The scenarios can be different depending on the platforms.
 
 ## The Scenarios
 

@@ -4,7 +4,7 @@ description: Learn the best practices when using MSAL.NET in your application de
 author: cilwerner
 manager: CelesteDG
 ms.author: cwerner
-ms.date: 03/17/2023
+ms.date: 07/21/2025
 ms.service: msal
 ms.subservice: msal-dotnet
 ms.reviewer:
@@ -16,6 +16,20 @@ ms.custom: devx-track-csharp, aaddev
 
 
 # Best practices for MSAL.NET
+
+## Use the Latest Version
+Always use the latest version of MSAL.NET to ensure you have the latest security fixes, performance improvements, and features. Check the [NuGet package](https://www.nuget.org/packages/Microsoft.Identity.Client/) regularly for updates.
+
+## Platform-Specific Recommendations
+
+### For Modern .NET Applications (.NET 8+)
+- Use dependency injection for MSAL.NET services
+- Take advantage of improved performance with System.Text.Json
+- Leverage minimal APIs for lightweight web applications
+
+### For Cross-Platform Mobile Development
+- Use .NET MAUI instead of Xamarin (deprecated as of June 2023)
+- Implement platform-specific browser configurations for optimal user experience
 
 ## Never parse an access token
 
